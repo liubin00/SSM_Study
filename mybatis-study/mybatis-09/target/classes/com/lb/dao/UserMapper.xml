@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lb.dao.UserMapper">
+    <select id="queryUserById" resultType="com.lb.pojo.User">
+        SELECT * from USER where id=#{id}
+    </select>
+
+    <update id="updateUser" parameterType="com.lb.pojo.User">
+        update user set name=#{name},pwd=#{pwd} where id=#{id}
+    </update>
+</mapper>

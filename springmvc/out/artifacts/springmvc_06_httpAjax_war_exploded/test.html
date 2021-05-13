@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iframe测试体验页面无刷新</title>
+    <script>
+        function go() {
+            /*所有的值变量，提前获取*/
+            var url=document.getElementById("url").value;
+            document.getElementById("iframeWindow").src = url;
+        }
+    </script>
+</head>
+<body>
+
+<div>
+    <p>请输入地址:</p>
+    <p>
+        <input type="text" id="url" value="https://www.baidu.com">
+        <input type="button" value="提交" onclick="go()">
+    </p>
+</div>
+
+<div>
+    <iframe id="iframeWindow" frameborder="1" style="width: 100% ;height: 500px"></iframe>
+</div>
+</body>
+</html>
